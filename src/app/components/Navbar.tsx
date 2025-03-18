@@ -1,10 +1,13 @@
 "use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
@@ -39,7 +42,9 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <Button className="hidden md:flex px-6 py-2 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 rounded-full">
+                <Button 
+                className="hidden md:flex px-6 py-2 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 rounded-full"
+                onClick={()=>router.push("/SignUp")}>
                     SignUp
                 </Button>
 

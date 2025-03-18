@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-black via-[#080B24] to-[#2B1B52] scroll-smooth">
+    <div className="scroll-smooth">
       <Navbar />
       <section id="hero"><Hero /></section>
       <section id="features"><Features /></section>

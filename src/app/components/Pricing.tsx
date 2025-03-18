@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const pricingPlans = [
   {
@@ -24,6 +25,12 @@ const pricingPlans = [
 ];
 
 export default function Pricing() {
+  const router = useRouter();
+
+  const handleBuyNow = (plan: any) => {
+    router.push(`/checkout?name=${plan.name}&price=${plan.price}`);
+  };
+
   return (
     <section className="relative py-20 text-white">
       <motion.h2
@@ -64,7 +71,10 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Button className="mt-6 w-full bg-yellow-400 text-black hover:bg-yellow-500 font-semibold">
+                <Button
+                  onClick={() => handleBuyNow(plan)}
+                  className="mt-6 w-full bg-yellow-400 text-black hover:bg-yellow-500 font-semibold"
+                >
                   Buy Now
                 </Button>
               </CardContent>

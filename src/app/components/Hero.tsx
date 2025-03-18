@@ -3,10 +3,14 @@
 import React from "react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+
 
 export function Hero() {
+
+    const router = useRouter();
     return (
-        <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md relative">
+        <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md relative mt-30">
 
 
             <motion.h1
@@ -29,6 +33,16 @@ export function Hero() {
                 WatchDen offers an exclusive collection of the world’s most <br />
                 sought-after luxury timepieces.
             </motion.p>
+
+            <motion.button
+                whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(59,130,246,0.8)" }}
+                whileTap={{ scale: 0.95 }}
+                className="relative z-20 px-6 py-2 mt-6 text-lg font-semibold text-white transition-all duration-300 bg-black border border-blue-500 rounded-lg shadow-lg hover:bg-blue-800 focus:outline-none"
+                onClick={()=>router.push("/SignUp")}
+            >
+                Get Started
+            </motion.button>
+
 
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
