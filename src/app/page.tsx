@@ -1,6 +1,7 @@
 import Features from "./components/Features";
 import Hero from "./components/Hero";
 import { WatchProduct } from "./components/Product";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero/>
       <Features/>
       <WatchProduct/>
+      <Testimonials/>
     </div>
   );
 }
