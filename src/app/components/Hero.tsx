@@ -3,7 +3,6 @@
 import React from "react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 export function Hero() {
     return (
@@ -37,20 +36,6 @@ export function Hero() {
                 transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
                 className="mt-6"
             >
-                <Button
-                    variant="default"
-                    className="relative px-8 py-6 text-[1.3rem] font-semibold text-gray-200 rounded-lg 
-             border border-gray-800 bg-[#111] transition-all duration-300 
-             shadow-[0_0_10px_rgba(255,255,255,0.1)] 
-             hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] 
-             hover:bg-[#1a1a1a] hover:border-gray-600 
-             before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r 
-             before:from-gray-700/20 before:via-gray-500/10 before:to-gray-700/20 
-             before:opacity-0 before:transition-opacity before:duration-300 
-             hover:before:opacity-40"
-                >
-                    Explore Collection
-                </Button>
 
             </motion.div>
 
