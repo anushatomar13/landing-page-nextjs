@@ -1,35 +1,58 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
+import React from "react";
+import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
 
-export default function Hero() {
-    return (
-        <section className="relative flex flex-col items-center justify-center h-screen text-center px-6">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-0"></div>
+export function Hero() {
+  return (
+    <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      
+      <motion.h1
+        initial={{ opacity: 0, y: 20, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="md:text-[1rem] text-3xl lg:text-6xl font-bold text-center text-white relative z-20"
+      >
+        Discover Timeless Elegance
+      </motion.h1>
 
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative z-10 max-w-4xl"
-            >
-                <h1 className="text-6xl font-bold text-white tracking-tight leading-tight">
-                    Discover Timeless Elegance
-                </h1>
-                <p className="mt-4 text-lg text-gray-300">
-                    WatchDen offers an exclusive collection of the world’s most sought-after luxury timepieces.
-                </p>
+      <br />
 
-                <div className="mt-6 flex gap-4 justify-center">
-                    <Button size="lg" className="bg-white text-black font-semibold hover:bg-gray-200">
-                        Explore Collection
-                    </Button>
-                    <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                        Contact Us
-                    </Button>
-                </div>
-            </motion.div>
-        </section>
-    );
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+        className="md:text-[1rem] text-[1rem] lg:text-3xl font-bold text-center text-white relative z-20"
+      >
+        WatchDen offers an exclusive collection of the world’s most <br /> 
+        sought-after luxury timepieces.
+      </motion.p>
+
+      <div className="w-[40rem] h-40 relative">
+        {/* Glowing Lines */}
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="w-full h-full"
+        >
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+        </motion.div>
+
+        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
+    </div>
+  );
 }
