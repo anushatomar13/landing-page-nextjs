@@ -25,7 +25,7 @@ const pricingPlans = [
 
 export default function Pricing() {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-black via-gray-900 to-black text-white">
+    <section className="relative py-20 text-white">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

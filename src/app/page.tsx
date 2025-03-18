@@ -1,4 +1,5 @@
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import { Hero } from "./components/Hero";
 import Pricing from "./components/Pricing";
 import { WatchProduct } from "./components/Product";
@@ -12,6 +13,7 @@ export default function Home() {
       <WatchProduct />
       <Testimonials />
       <Pricing />
+      <Footer/>
     </div>
   );
 }
