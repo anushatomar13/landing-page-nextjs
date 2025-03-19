@@ -15,18 +15,9 @@ WatchDen is a web application showcasing an exclusive collection of luxury timep
 - **Elegant UI**: Stylish and modern design for displaying luxury timepieces.
 - **Unit Testing**: Hero and Pricing sections are tested for functionality and interaction.
 
-## Setup
+## Getting Started
 
-To get started with this project, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/anushatomar13/landing-page-nextjs.git
-   cd landing-page-nextjs
-
-
-
-## Install dependencies:
+First, run the development server:
 
 ```bash
 npm install
