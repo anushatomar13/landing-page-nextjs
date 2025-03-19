@@ -42,12 +42,14 @@ export default function Navbar() {
                 </div>
 
                 <button
-  className="items-center justify-center gap-2 whitespace-nowrap text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
+  className="flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium text-white bg-indigo-600 rounded-md px-4 py-2 hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 disabled:bg-gray-500 disabled:text-gray-300 disabled:pointer-events-none disabled:opacity-50"
   aria-label="SignUp"
   data-slot="button"
+  onClick={() => router.push("/SignUp")}
 >
   SignUp
 </button>
+
 
 
                 <button
