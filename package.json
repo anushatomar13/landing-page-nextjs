@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run test",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
@@ -12,8 +12,8 @@
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
-    "@testing-library/dom": "^9.3.4",
-    "@testing-library/react": "^12.1.5",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.2.0", 
     "@testing-library/user-event": "^14.6.1",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
@@ -38,7 +38,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.6.3",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^17",
@@ -55,5 +55,8 @@
     "tailwindcss": "^4",
     "ts-jest": "^29.2.6",
     "typescript": "^5"
+  },
+  "installConfig": {
+    "pnp": false
   }
 }
