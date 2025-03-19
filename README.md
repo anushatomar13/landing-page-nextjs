@@ -19,10 +19,11 @@ WatchDen is a web application showcasing an exclusive collection of luxury timep
 
 To get started with this project, follow these steps:
 
-1. Clone the repository:
+## Clone the repository:
    ```bash
    git clone https://github.com/anushatomar13/landing-page-nextjs.git
    cd landing-page-nextjs
+```
 
 
 
