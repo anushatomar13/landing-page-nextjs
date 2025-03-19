@@ -5,14 +5,11 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-
 export function Hero() {
-
     const router = useRouter();
+
     return (
         <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md relative mt-30">
-
-
             <motion.h1
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -35,23 +32,23 @@ export function Hero() {
             </motion.p>
 
             <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                 whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(59,130,246,0.8)" }}
                 whileTap={{ scale: 0.95 }}
                 className="relative z-20 px-6 py-2 mt-6 text-lg font-semibold text-white transition-all duration-300 bg-black border border-blue-500 rounded-lg shadow-lg hover:bg-blue-800 focus:outline-none"
-                onClick={()=>router.push("/SignUp")}
+                onClick={() => router.push("/SignUp")}
             >
                 Get Started
             </motion.button>
 
-
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+                transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
                 className="mt-6"
-            >
-
-            </motion.div>
+            ></motion.div>
 
             <div className="w-[40rem] h-40 relative">
                 <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
@@ -65,7 +62,6 @@ export function Hero() {
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     className="w-full h-full"
                 >
-
                     <SparklesCore
                         background="transparent"
                         minSize={0.4}
