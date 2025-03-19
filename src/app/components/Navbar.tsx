@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -42,11 +41,14 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <Button 
-                className="hidden md:flex px-6 py-2 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 rounded-full"
-                onClick={()=>router.push("/SignUp")}>
-                    SignUp
-                </Button>
+                <button
+  className="items-center justify-center gap-2 whitespace-nowrap text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
+  aria-label="SignUp"
+  data-slot="button"
+>
+  SignUp
+</button>
+
 
                 <button
                     className="md:hidden text-white"
